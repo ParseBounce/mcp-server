@@ -1,0 +1,63 @@
+{
+  "name": "@parsebounce/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for ParseBounce — check email bounces, complaints, suppressions and deliverability stats for AWS SES, SendGrid, Mailgun, SparkPost, Postmark and Mandrill from Claude, Cursor, VS Code or any MCP client.",
+  "mcpName": "com.parsebounce/parsebounce",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "email",
+    "email-deliverability",
+    "email-bounce",
+    "bounce-handling",
+    "complaints",
+    "suppression-list",
+    "aws-ses",
+    "ses",
+    "sendgrid",
+    "mailgun",
+    "postmark",
+    "sparkpost",
+    "mandrill",
+    "claude",
+    "cursor",
+    "ai",
+    "llm"
+  ],
+  "homepage": "https://parsebounce.com/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParseBounce/mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ParseBounce/mcp-server/issues"
+  },
+  "license": "MIT",
+  "author": "ParseBounce (https://parsebounce.com)",
+  "type": "module",
+  "bin": {
+    "parsebounce-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test test/",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
